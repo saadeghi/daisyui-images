@@ -31,7 +31,7 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "Convert images to WebP"
+          git diff-index --quiet HEAD || git commit -m "Convert images to WebP"
       
       - name: Push changes
         uses: ad-m/github-push-action@master
