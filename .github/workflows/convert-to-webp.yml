@@ -18,10 +18,10 @@ jobs:
         uses: oven-sh/setup-bun@v1.2.2
 
       - name: Install dependencies
-        run: bun install
+        run: cd .github/workflows && bun install
 
       - name: Convert images to WebP
-        run: bun convert-to-webp.js
+        run: cd .github/workflows && bun convert-to-webp.js
 
       - name: Configure Git
         run: |
